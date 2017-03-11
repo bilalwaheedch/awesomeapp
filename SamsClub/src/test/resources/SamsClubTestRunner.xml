@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HomePageTest test suite on Nexus4 Emulator">
+
+    <parameter name="OS" value="Android"/>
+    <parameter name="appType" value="Phone"/>
+    <parameter name="deviceType" value="Emulator"/>
+    <parameter name="deviceName" value="Nexus"/>
+    <parameter name="version" value="5.0.1"/>
+    <parameter name="moduleName" value="SamsClub"/>
+    <parameter name="appName" value="SamsClub_v5-9-2.apk"/>
+    <parameter name="appPackage" value="com.rfi.sams.android"/>
+    <parameter name="appWaitActivity" value="com.rfi.sams.android"/>
+
+    <test name="Test Main Menu" preserve-order="true">
+        <classes>
+            <class name="AddToCart.CartTest"/>
+        </classes>
+    </test>
+
+    <!-- Test1 specific params are defined below this-->
+    <parameter name="" value=""/>
+</suite>
