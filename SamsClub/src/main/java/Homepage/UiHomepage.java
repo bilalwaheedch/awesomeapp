@@ -1,5 +1,6 @@
 package Homepage;
 
+import io.appium.java_client.MobileElement;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,6 +11,6 @@ public class UiHomepage {
     @FindBy(xpath = "//android.widget.RelativeLayout[1]/android.widget.EditText[1]")
     public WebElement btnEnableSearch;
 
-    @FindBy(xpath = "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.EditText[1]")
+    @FindBy(id = "com.rfi.sams.android:id/searchTextView")
     public WebElement tfSearchField;
 }

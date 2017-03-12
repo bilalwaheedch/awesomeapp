@@ -116,6 +116,8 @@ public class Base {
                     cap.setCapability("deviceName",deviceName);
 //                    cap.setCapability("applicationName",deviceName);
 //                    cap.setCapability("app",findApp.getAbsolutePath());
+                    cap.setCapability("unicodeKeyboard", "true");
+                    cap.setCapability("resetKeyboard", "true");
                     cap.setCapability("noReset",true);
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

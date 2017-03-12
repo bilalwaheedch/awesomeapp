@@ -5,6 +5,7 @@ import Homepage.UiHomepage;
 import ProductPage.UiProductPage;
 import SearchResults.UiSearchResults;
 import common.Base;
+import io.appium.java_client.MobileBy;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
@@ -16,8 +17,10 @@ public class CommonMethods extends Base {
     public void addToCart(String item){
         UiHomepage uiHomepage = PageFactory.initElements(ad,UiHomepage.class);
         uiHomepage.btnEnableSearch.click();
-        uiHomepage.tfSearchField.click();
-        uiHomepage.tfSearchField.sendKeys(item, Keys.ENTER);
+//        uiHomepage.tfSearchField.click();
+        uiHomepage.tfSearchField.sendKeys(item);
+        ad.sendKeyEvent(66);
+//        ad.findElement(MobileBy.id("com.rfi.sams.android:id/searchTextView")).sendKeys(item, Keys.ENTER);
         UiSearchResults uiSearchResults = PageFactory.initElements(ad,UiSearchResults.class);
         uiSearchResults.lnkFirstResult.click();
         UiCart uiCart = PageFactory.initElements(ad,UiCart.class);
