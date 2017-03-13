@@ -92,7 +92,7 @@ public class Base {
 
         }else if(OS.equalsIgnoreCase("Android")){
             if(appType.contains("Phone")){
-                appDirectory = new File(moduleName+"/src/app");
+                appDirectory = new File("src/app");
                 findApp = new File(appDirectory,appName);
                 if(deviceType.equalsIgnoreCase("RealDevice")){
                     cap = new DesiredCapabilities();
@@ -112,14 +112,15 @@ public class Base {
 //                        cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
 //                        cap.setCapability("appPackage",appPackage);
 //                        cap.setCapability("appWaitActivity",appWaitActivity);
-                    cap.setCapability("platformName", "Android");
+//                    cap.setCapability("platformName", "Android");
                     cap.setCapability("deviceName",deviceName);
                     cap.setCapability("applicationName",deviceName);
-//                    cap.setCapability("app",findApp.getAbsolutePath());
+                    cap.setCapability("app",findApp.getAbsolutePath());
                     cap.setCapability("unicodeKeyboard", "true");
                     cap.setCapability("resetKeyboard", "true");
                     cap.setCapability("noReset",true);
-                    ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+//                    ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+                    ad = new AndroidDriver(new URL("http://bilal.dyndns.info:4444/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
                 }
 

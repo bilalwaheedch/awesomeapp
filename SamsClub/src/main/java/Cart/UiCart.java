@@ -9,5 +9,6 @@ import org.openqa.selenium.support.FindBy;
 public class UiCart {
     @FindBy(xpath = "//android.widget.RelativeLayout[1]/android.widget.TextView[1]")
     public WebElement txtCartCount;
-
+    @FindBy(className = "android.widget.Button")
+    public WebElement btnAddToCart;
 }

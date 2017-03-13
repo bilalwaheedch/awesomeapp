@@ -8,7 +8,7 @@
     <parameter name="deviceName" value="Nexus"/>
     <parameter name="version" value="5.0.1"/>
     <parameter name="moduleName" value="SamsClub"/>
-    <parameter name="appName" value="SamsClub_v5-9-2.apk"/>
+    <parameter name="appName" value="SC_v5-9-2.apk"/>
     <parameter name="appPackage" value="com.rfi.sams.android"/>
     <parameter name="appWaitActivity" value="com.rfi.sams.android"/>
 
