@@ -23,13 +23,15 @@ public class CommonMethods extends Base {
 //        ad.findElement(MobileBy.id("com.rfi.sams.android:id/searchTextView")).sendKeys(item, Keys.ENTER);
         UiSearchResults uiSearchResults = PageFactory.initElements(ad,UiSearchResults.class);
         uiSearchResults.lnkFirstResult.click();
-        UiCart uiCart = PageFactory.initElements(ad,UiCart.class);
-        int cartCount = Integer.parseInt(uiCart.txtCartCount.getText());
         UiProductPage uiProductPage = PageFactory.initElements(ad,UiProductPage.class);
-        scrollAndClickByName("Ship This Item");
+        scrollAndClickByName(ad,"Ship");
+        uiProductPage.btnShipToAddress.click();
         uiProductPage.btnAddToCart.click();
         uiProductPage.btnDeclineProtectionPlan.click();
-        Assert.assertTrue(cartCount==cartCount+1);
 
+    }
+    public int getCartCount(){
+        UiCart uiCart = PageFactory.initElements(ad,UiCart.class);
+        return Integer.parseInt(uiCart.txtCartCount.getText());
     }
 }

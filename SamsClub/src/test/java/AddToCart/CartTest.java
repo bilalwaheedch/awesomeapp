@@ -1,6 +1,7 @@
 package AddToCart;
 
 import methods.CommonMethods;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -9,6 +10,9 @@ import org.testng.annotations.Test;
 public class CartTest extends CommonMethods {
     @Test
     public void addToCartTest(){
+        int cartCount = 0;
         addToCart("Xbox One");
+        cartCount++;
+        Assert.assertEquals(getCartCount(),cartCount);
     }
 }

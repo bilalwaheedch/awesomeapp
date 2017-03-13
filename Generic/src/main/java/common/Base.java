@@ -114,7 +114,7 @@ public class Base {
 //                        cap.setCapability("appWaitActivity",appWaitActivity);
                     cap.setCapability("platformName", "Android");
                     cap.setCapability("deviceName",deviceName);
-//                    cap.setCapability("applicationName",deviceName);
+                    cap.setCapability("applicationName",deviceName);
 //                    cap.setCapability("app",findApp.getAbsolutePath());
                     cap.setCapability("unicodeKeyboard", "true");
                     cap.setCapability("resetKeyboard", "true");
@@ -199,10 +199,11 @@ public class Base {
             System.err.println("No alert visible in 5 seconds");
         }
     }
-    public void scrollAndClickByName(String locator){
+    public void scrollAndClickByName(AppiumDriver driver, String locator){
 /*        if(ad.findElementById(locator).isDisplayed()){
             ad.findElementById(locator).click();
-        }else*/ ad.scrollTo(locator).click();
+        }else*/ driver.scrollTo(locator).click();
     }
+
 
 }
